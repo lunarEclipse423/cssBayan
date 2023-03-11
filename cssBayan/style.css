@@ -1,3 +1,7 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Source Code Pro", monospace;
   font-style: normal;
@@ -5,11 +9,11 @@ body {
 }
 
 h1 {
-  margin: 10px 0;
+  margin: 1rem 0;
   font-weight: 600;
-  font-size: 40px;
-  line-height: 50px;
-  letter-spacing: -1px;
+  font-size: 4rem;
+  line-height: 5rem;
+  letter-spacing: -0.1rem;
   text-transform: uppercase;
   font-feature-settings: "pnum" on, "lnum" on;
   color: #0ebd7e;
@@ -22,23 +26,23 @@ ul {
 
 .main {
   margin: 0 auto;
-  padding: 30px;
-  max-width: 900px;
+  padding: 3rem;
+  max-width: 90rem;
   background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 24px;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 2.4rem;
 }
 
 .accordion {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
 }
 
 .icon {
   display: none;
-  width: 16px;
-  height: 16px;
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 .icon-select {
@@ -53,9 +57,9 @@ ul {
 .meme-title {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.15px;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.015rem;
   font-feature-settings: "pnum" on, "lnum" on;
 }
 
@@ -86,8 +90,8 @@ ul {
 
 .accordion:hover .input-title {
   background: #ffffff;
-  border: 1px solid #0ebd8d;
-  border-radius: 40px;
+  border: 0.1rem solid #0ebd8d;
+  border-radius: 4rem;
 }
 
 .accordion:hover .meme-label .icon {
@@ -95,12 +99,12 @@ ul {
 }
 
 .input-title {
-  padding: 12px 16px;
+  padding: 1.2rem 1.6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  border-radius: 40px;
+  border-radius: 4rem;
 }
 
 .meme-input {
@@ -109,14 +113,14 @@ ul {
 
 .fig {
   margin: 0 auto;
-  height: 0px;
+  height: 0;
   text-align: center;
   overflow: hidden;
   transition: all 0.5s ease-in;
 }
 
 .meme-input:hover ~ .fig {
-  padding: 30px 0;
+  padding: 3rem 0;
   height: 100%;
 }
 
@@ -125,7 +129,7 @@ ul {
 }
 
 .meme-input:checked ~ .fig {
-  padding: 30px 0;
+  padding: 3rem 0;
   height: 100%;
 }
 
@@ -139,6 +143,6 @@ ul {
 
 .list-item label .meme-input:checked ~ .input-title {
   background: #ffffff;
-  border: 1px solid #0ebd8d;
-  border-radius: 40px;
+  border: 0.1rem solid #0ebd8d;
+  border-radius: 4rem;
 }
