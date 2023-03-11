@@ -142,7 +142,7 @@ ul {
   border-radius: 4rem;
 }
 
-@media (min-width: 821px) {
+@media (hover: hover) and (pointer: fine) {
   .accordion:hover .meme-label .meme-title {
     color: var(--color-primary);
   }
