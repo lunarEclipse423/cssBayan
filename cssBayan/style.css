@@ -4,6 +4,7 @@
   --color-dark: #000000;
   --color-border: linear-gradient(301.23deg, #0cb98d 0%, #15d48a 100%);
   --color-active: #00b5ff;
+  --color-main-border: rgba(0, 0, 0, 0.1);
 }
 
 html {
@@ -33,11 +34,11 @@ ul {
 }
 
 .main {
-  margin: 0 auto;
+  margin: 5rem auto;
   padding: 3rem;
   max-width: 90rem;
   background: var(--color-light);
-  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid var(--color-main-border);
   border-radius: 2.4rem;
 }
 
@@ -69,6 +70,7 @@ ul {
   line-height: 2.4rem;
   letter-spacing: 0.015rem;
   font-feature-settings: "pnum" on, "lnum" on;
+  flex-basis: 90%;
 }
 
 .list-item:active {
@@ -96,19 +98,6 @@ ul {
   background: var(--color-border);
 }
 
-.accordion:hover .meme-label .meme-title {
-  color: var(--color-primary);
-}
-
-.accordion:hover .input-title {
-  background: var(--color-light);
-  border-radius: 4rem;
-}
-
-.accordion:hover .meme-label .icon {
-  display: block;
-}
-
 .input-title {
   padding: 1.2rem 1.6rem;
   display: flex;
@@ -130,13 +119,9 @@ ul {
   transition: all 0.5s ease-in;
 }
 
-.meme-input:hover ~ .fig {
-  padding: 3rem 0;
-  height: 100%;
-}
-
-.meme-input:hover ~ .input-title .icon-select {
-  transform: rotate(45deg);
+.responsive-img {
+  max-width: 100%;
+  height: auto;
 }
 
 .meme-input:checked ~ .fig {
@@ -155,4 +140,58 @@ ul {
 .list-item .meme-label .meme-input:checked ~ .input-title {
   background: var(--color-light);
   border-radius: 4rem;
+}
+
+@media (min-width: 821px) {
+  .accordion:hover .meme-label .meme-title {
+    color: var(--color-primary);
+  }
+  .accordion:hover .input-title {
+    background: var(--color-light);
+    border-radius: 4rem;
+  }
+  .accordion:hover .meme-label .icon {
+    display: block;
+  }
+  .meme-input:hover ~ .fig {
+    padding: 3rem 0;
+    height: 100%;
+  }
+  .meme-input:hover ~ .input-title .icon-select {
+    transform: rotate(45deg);
+  }
+}
+
+@media (max-width: 820px) {
+  h1 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+  .main {
+    max-width: 65rem;
+  }
+  .meme-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+  .main {
+    margin: 3rem auto;
+    padding: 2rem;
+    max-width: 65rem;
+  }
+  .meme-title {
+    font-size: 1.4rem;
+  }
+  .meme-input:checked ~ .fig {
+    padding: 1rem 0 0;
+  }
+  .input-title {
+    border-radius: 2.5rem;
+  }
 }
