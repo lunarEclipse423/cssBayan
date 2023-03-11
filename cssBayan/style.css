@@ -1,3 +1,11 @@
+:root {
+  --color-primary: #0ebd8d;
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --color-border: linear-gradient(301.23deg, #0cb98d 0%, #15d48a 100%);
+  --color-active: #00b5ff;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -5,7 +13,7 @@ html {
 body {
   font-family: "Source Code Pro", monospace;
   font-style: normal;
-  background: linear-gradient(301.23deg, #0cb98d 0%, #15d48a 100%);
+  background: var(--color-border);
 }
 
 h1 {
@@ -16,7 +24,7 @@ h1 {
   letter-spacing: -0.1rem;
   text-transform: uppercase;
   font-feature-settings: "pnum" on, "lnum" on;
-  color: #0ebd7e;
+  color: var(--color-dark);
 }
 
 ul {
@@ -28,7 +36,7 @@ ul {
   margin: 0 auto;
   padding: 3rem;
   max-width: 90rem;
-  background: #ffffff;
+  background: var(--color-light);
   border: 0.1rem solid rgba(0, 0, 0, 0.1);
   border-radius: 2.4rem;
 }
@@ -47,7 +55,7 @@ ul {
 
 .icon-select {
   background-image: url("./assets/plus.svg");
-  transition: all 0.5s ease-in;
+  transition: transform 0.5s ease-in;
 }
 
 .meme-label {
@@ -68,29 +76,32 @@ ul {
 }
 
 .list-item:active .meme-label .input-title .meme-title {
-  color: blue;
+  color: var(--color-active);
+}
+
+.list-item:active .meme-label .input-title {
+  border-color: var(--color-active);
 }
 
 .list-item:active .meme-label .input-title .icon-select {
-  /* TODO: replace with needed color svg */
-  background-image: url("./assets/plus.svg");
+  background-image: url("./assets/plus-blue.svg");
 }
 
 .accordion .meme-label .meme-title {
-  color: #ffffff;
+  color: var(--color-light);
 }
 
 .input-title {
-  background: linear-gradient(301.23deg, #0cb98d 0%, #15d48a 100%);
+  border: 0.1rem solid var(--color-primary);
+  background: var(--color-border);
 }
 
 .accordion:hover .meme-label .meme-title {
-  color: #0ebd8d;
+  color: var(--color-primary);
 }
 
 .accordion:hover .input-title {
-  background: #ffffff;
-  border: 0.1rem solid #0ebd8d;
+  background: var(--color-light);
   border-radius: 4rem;
 }
 
@@ -138,11 +149,10 @@ ul {
 }
 
 .meme-input:checked ~ .input-title .meme-title {
-  color: #0ebd8d;
+  color: var(--color-primary);
 }
 
-.list-item label .meme-input:checked ~ .input-title {
-  background: #ffffff;
-  border: 0.1rem solid #0ebd8d;
+.list-item .meme-label .meme-input:checked ~ .input-title {
+  background: var(--color-light);
   border-radius: 4rem;
 }
