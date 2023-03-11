@@ -173,9 +173,12 @@ ul {
   .meme-title {
     font-size: 1.6rem;
   }
+  .meme-input:checked ~ .fig {
+    padding: 2rem 0;
+  }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 425px) {
   h1 {
     font-size: 2.2rem;
     line-height: 3rem;
